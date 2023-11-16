@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterOutlet} from '@angular/router';
-import { POKEMONS} from "./mock-pokemon-list";
+import {POKEMONS} from "./mock-pokemon-list";
 import {Pokemon} from "./pokemon";
 
 @Component({
@@ -15,10 +15,12 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         console.table(this.pokemonListe);
-        this.selectPokemon(this.pokemonListe[0]);
     }
 
-    selectPokemon(pokemon: Pokemon){
-        console.log(`Vous avez cliqué sur le pokemon ${pokemon.name}`);
+    selectPokemon(event: MouseEvent) {
+        const index: number = +(event.target as HTMLInputElement).value;
+        console.log(`Vous avez cliqué sur le pokemon ${this.pokemonListe[index].name}`);
     }
+
+
 }

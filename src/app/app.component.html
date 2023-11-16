@@ -1,5 +1,7 @@
 <h1>Liste de Pokémons</h1>
-<p (click)="selectPokemon(pokemonListe[0])">{{ pokemonListe[0].name }}</p>
+<input #input (keyup)="0" type="text">
+<p>{{ input.value }}</p>
+<p>{{ pokemonListe[0].name}}</p>
 <p>{{ pokemonListe[1].name}}</p>
 <p>{{ pokemonListe[2].name}}</p>
 <p>{{ pokemonListe[3].name}}</p>
