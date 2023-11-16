@@ -1,15 +1,22 @@
-<h1>Liste de Pokémons</h1>
-<input #input (keyup)="0" type="text">
-<p>{{ input.value }}</p>
-<p>{{ pokemonListe[0].name}}</p>
-<p>{{ pokemonListe[1].name}}</p>
-<p>{{ pokemonListe[2].name}}</p>
-<p>{{ pokemonListe[3].name}}</p>
-<p>{{ pokemonListe[4].name}}</p>
-<p>{{ pokemonListe[5].name}}</p>
-<p>{{ pokemonListe[6].name}}</p>
-<p>{{ pokemonListe[7].name}}</p>
-<p>{{ pokemonListe[8].name}}</p>
-<p>{{ pokemonListe[9].name}}</p>
-<p>{{ pokemonListe[10].name}}</p>
-<p>{{ pokemonListe[11].name}}</p>
+<h1 class="center">Liste de Pokémons</h1>
+
+<div class="container">
+    <div class="row">
+        <div *ngFor="let pokemon of pokemonListe" class="col m4 s6">
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img [src]="pokemon.picture"/>
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>{{ pokemon.name }}</p>
+                        <p><small>{{ pokemon.created }}</small></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
