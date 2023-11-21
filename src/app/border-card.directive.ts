@@ -28,6 +28,6 @@ export class BorderCardDirective {
 
   //définir taille bordure et couleur bordure des cartes
   setBorder(color: string){
-    this.el.nativeElement.style.border = `solid 4x ${color}`;
+    this.el.nativeElement.style.border = `4px solid ${color}`;
   }
 }
