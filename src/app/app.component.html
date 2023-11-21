@@ -3,8 +3,7 @@
 <div class="container">
     <div class="row">
         <div *ngFor="let pokemon of pokemonListe" class="col m4 s6">
-            //Appel de la directive
-            <div class="card horizontal" (click)="selectPokemon(pokemon)" pkmnBorderCard="red">
+            <div class="card horizontal" (click)="selectPokemon(pokemon)" pkmnBorderCard>
                 <div class="card-image">
                     <img [src]="pokemon.picture"/>
                 </div>
