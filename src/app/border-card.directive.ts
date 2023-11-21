@@ -12,7 +12,7 @@ export class BorderCardDirective {
   }
 
   //changement couleur bordure quand curseur sur la carte
-  @HostListener('mouseenter') onMouseEnter(){
+  @HostListener('mouseenter') onMouseEnter() {
     this.setBorder('#009688');
   }
 
