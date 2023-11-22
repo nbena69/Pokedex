@@ -12,25 +12,4 @@ import {PokemonTypeColorPipe} from "./pokemon-type-color.pipe";
     imports: [CommonModule, RouterOutlet, BorderCardDirective, PokemonTypeColorPipe],
     templateUrl: 'app.component.html'
 })
-export class AppComponent implements OnInit {
-    pokemonListe: Pokemon[] = POKEMONS;
-    pokemonSelected: Pokemon | undefined;
-
-    ngOnInit() {
-        console.table(this.pokemonListe);
-    }
-
-    selectPokemon(pokemonID: object) {
-        const id = +pokemonID;
-        const pokemon: Pokemon | undefined = this.pokemonListe.find(pokemon => pokemon.id == +pokemonID);
-        if ((pokemon)) {
-            console.log(`Vous avez cliqué sur le pokemon ${pokemon.name}`);
-            this.pokemonSelected = pokemon;
-        } else {
-            console.log(`Vous avez demander un pokémon qui n'existe pas.`);
-            this.pokemonSelected = pokemon;
-        }
-    }
-
-
-}
+export class AppComponent {}
