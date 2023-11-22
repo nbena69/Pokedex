@@ -1,20 +1,16 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule} from "@angular/platform-browser";
-import { CommonModule } from '@angular/common';
-
-import { AppComponent } from "./app.component";
-import {PokemonModule} from "./pokemon/pokemon.module";
-
+import {BrowserModule} from "@angular/platform-browser";
+import {CommonModule} from '@angular/common';
+import {AppComponent} from "./app.component";
+import {NgModule} from "@angular/core";
 
 @NgModule({
-  declarations: [
-  ],
-  imports: [
-      BrowserModule,
-    CommonModule,
-      PokemonModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [],
+    imports: [
+        BrowserModule,
+        CommonModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
