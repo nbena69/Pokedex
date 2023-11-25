@@ -13,7 +13,8 @@ import {PokemonTypeColorPipe} from "../pokemon-type-color.pipe";
 })
 export class DetailPokemonComponent implements OnInit{
   pokemonList: Pokemon[];
-  pokemon: Pokemon |undefined
+  pokemon: Pokemon |undefined;
+
   //Permet de rendre le service route disponible dans le composant
   constructor(private  route: ActivatedRoute, private router: Router) {}
   ngOnInit() {

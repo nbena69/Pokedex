@@ -1,13 +1,21 @@
-import {BrowserModule} from "@angular/platform-browser";
+import {BrowserModule} from '@angular/platform-browser';
 import {CommonModule} from '@angular/common';
-import {AppComponent} from "./app.component";
-import {NgModule} from "@angular/core";
+import {NgModule} from '@angular/core';
+
+import {AppComponent} from './app.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {PokemonModule} from './pokemon/pokemon.module';
+import {AppRoutes} from "./app.routes";
 
 @NgModule({
-    declarations: [],
+    declarations: [
+        AppComponent,
+        PageNotFoundComponent
+    ],
     imports: [
         BrowserModule,
-        CommonModule
+        PokemonModule,
+        AppRoutes
     ],
     providers: [],
     bootstrap: [AppComponent]
