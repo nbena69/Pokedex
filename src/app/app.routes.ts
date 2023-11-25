@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
-import {ListPokemonComponent} from "./list-pokemon/list-pokemon.component";
-import {DetailPokemonComponent} from "./detail-pokemon/detail-pokemon.component";
+import {ListPokemonComponent} from "./pokemon/list-pokemon/list-pokemon.component";
+import {DetailPokemonComponent} from "./pokemon/detail-pokemon/detail-pokemon.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {Routes} from "@angular/router";
 
