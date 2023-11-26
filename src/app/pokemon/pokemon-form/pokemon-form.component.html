@@ -9,7 +9,6 @@
                            pattern="^[a-zA-Z0-9àéèç]{1,25}$"
                            [(ngModel)]="pokemon.name" name="name"
                            #name="ngModel">
-
                     <div [hidden]="name.valid || name.pristine"
                          class="card-panel red accent-1">
                         Le nom du pokémon est requis (1-25).
@@ -45,21 +44,18 @@
                 <div class="form-group">
                     <label for="types">Types</label>
                     <div *ngFor="let type of types" class="row">
-                        <label>
+                        <label style="display: flex; align-items: center;">
                             <input type="checkbox"
                                    class="filled-in"
                                    id="{{ type }}"
                                    [value]="type"
                                    [checked]="hasType(type)"
                                    [disabled]="!isTypesValid(type)"
-                                   (change)="selectType($event, type)"
-                            />
-                            <span [attr.for]="type">
-
-                    <div class="{{ type | pokemonTypeColor }}">
-                        {{ type }}
-                    </div>
-                        </span>
+                                   (change)="selectType($event, type)">
+                            <span [attr.for]="type"></span>
+                            <div class="{{ type | pokemonTypeColor }}">
+                                {{ type }}
+                            </div>
                         </label>
                     </div>
                 </div>
@@ -72,7 +68,6 @@
                         Valider
                     </button>
                 </div>
-
             </div>
         </div>
     </div>
