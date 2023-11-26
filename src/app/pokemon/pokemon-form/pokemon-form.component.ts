@@ -55,7 +55,4 @@ export class PokemonFormComponent implements OnInit {
         console.log('Fourmulaire ajouter !')
         this.router.navigate(['/pokemon', this.pokemon.id]);
     }
-
-
-
 }
