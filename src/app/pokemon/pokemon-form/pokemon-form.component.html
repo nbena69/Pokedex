@@ -44,21 +44,24 @@
 
                 <div class="form-group">
                     <label for="types">Types</label>
-                <div *ngFor="let type of types" class="row">
-                        <input type="checkbox"
-                               class="filled-in"
-                               id="{{ type }}"
-                               [value]="type"
-                               [checked]="hasType(type)"
-                               [disabled]="!isTypesValid(type)"
-                               (change)="selectType($event, type)"
-                        />
-                        <label [attr.for]="type">
-                    <span class="{{ type | pokemonTypeColor }}">
+                    <div *ngFor="let type of types" class="row">
+                        <label>
+                            <input type="checkbox"
+                                   class="filled-in"
+                                   id="{{ type }}"
+                                   [value]="type"
+                                   [checked]="hasType(type)"
+                                   [disabled]="!isTypesValid(type)"
+                                   (change)="selectType($event, type)"
+                            />
+                            <span [attr.for]="type">
+
+                    <div class="{{ type | pokemonTypeColor }}">
                         {{ type }}
-                    </span>
+                    </div>
+                        </span>
                         </label>
-                </div>
+                    </div>
                 </div>
 
                 <div class="divider"></div>
