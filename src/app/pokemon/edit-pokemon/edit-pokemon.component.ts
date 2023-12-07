@@ -4,7 +4,6 @@ import {Pokemon} from "../pokemon";
 import {ActivatedRoute} from "@angular/router";
 import {PokemonService} from "../pokemon.service";
 import {PokemonFormComponent} from "../pokemon-form/pokemon-form.component";
-import {HttpClient} from "@angular/common/http";
 
 @Component({
     selector: 'app-edit-pokemon',
@@ -20,7 +19,7 @@ import {HttpClient} from "@angular/common/http";
         </h2>
     `,
     styles: ``,
-    providers: [PokemonService, HttpClient]
+    providers: [PokemonService]
 })
 export class EditPokemonComponent implements OnInit {
     pokemon: Pokemon | undefined;
@@ -33,7 +32,7 @@ export class EditPokemonComponent implements OnInit {
     ngOnInit() {
         const pokemonId: string | null = this.route.snapshot.paramMap.get('id');
         if (pokemonId) {
-            this.pokemonService.getPokemonById(+pokemonId).subscribe(pokemon => this.pokemon = pokemon);
+            this.pokemon = this.pokemonService.getPokemonById(+pokemonId);
         } else {
             this.pokemon = undefined;
         }

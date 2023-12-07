@@ -4,14 +4,13 @@ import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {Pokemon} from "../pokemon";
 import {PokemonTypeColorPipe} from "../pokemon-type-color.pipe";
 import {PokemonService} from "../pokemon.service";
-import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-detail-pokemon',
   standalone: true,
   imports: [CommonModule, PokemonTypeColorPipe, RouterLink],
   templateUrl: './detail-pokemon.component.html',
-  providers: [PokemonService, HttpClient]
+  providers: [PokemonService]
 
 })
 export class DetailPokemonComponent implements OnInit{
@@ -24,7 +23,7 @@ export class DetailPokemonComponent implements OnInit{
     const pokemonId: string | null = this.route.snapshot.paramMap.get('id');
 
     if(pokemonId) {
-      this.pokemonService.getPokemonById(+pokemonId).subscribe(pokemon => this.pokemon = pokemon);
+      this.pokemon = this.pokemonService.getPokemonById(+pokemonId);
     }
   }
 
