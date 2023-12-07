@@ -1,43 +1,50 @@
-import {Injectable} from '@angular/core';
-import {Pokemon} from "./pokemon";
-import {HttpClient} from "@angular/common/http";
-import {catchError, Observable, of, tap} from "rxjs";
-import {response} from "express";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { catchError, Observable, of, tap } from 'rxjs';
+import { Pokemon } from './pokemon';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
+
+
 export class PokemonService {
 
     constructor(private http: HttpClient) {
 
     }
 
-    getPokemmonList(): Observable<Pokemon[]> {
+    getPokemonList(): Observable<Pokemon[]> {
         //return POKEMONS;
         return this.http.get<Pokemon[]>('api/pokemons').pipe(
+
             //tap = console.log mais pour Observable
+
             tap((response) => this.log(response)),
+
             //permet d'intercepter l'erreur et retourné tableau vide plutôt que application crash
-            catchError((Error) => this.handleError(Error, [])
+
+            catchError((error) => this.handleError(error, [])
             )
         )
     }
 
 
     getPokemonById(pokemonId: number): Observable<Pokemon | undefined> {
-        return this.http.get<Pokemon>(`api/pokemon/${pokemonId}`).pipe(
+        return this.http.get<Pokemon>(`api/pokemons/${pokemonId}`).pipe(
             tap((response) => this.log(response)),
-            catchError((Error) => this.handleError(Error, undefined)
+            catchError((error) => this.handleError(error, undefined)
             )
         )
     }
 
-    private handleError(error: Error, errorValue: any) {
-        console.error(error);
-        return of(errorValue)
+    public log(response: any) {
+        console.table(response);
     }
 
-    private log(response: Pokemon[] | Pokemon | undefined) {
-        console.table(response);
+    public handleError(error: Error, errorValue: any) {
+        console.error(error);
+        return of(errorValue);
     }
 
     getPokemonTypeList(): string[] {
