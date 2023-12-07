@@ -8,6 +8,8 @@ import {PokemonModule} from './pokemon/pokemon.module';
 import {AppRoutes} from "./app.routes";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {HttpClientInMemoryWebApiModule, InMemoryDbService} from "angular-in-memory-web-api";
+import {InMemoryDataService} from "./in-memory-data.service";
 
 @NgModule({
     declarations: [
@@ -18,6 +20,7 @@ import {HttpClientModule} from "@angular/common/http";
         BrowserModule,
         FormsModule,
         HttpClientModule,
+        HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false}),
         PokemonModule,
         AppRoutes
     ],
