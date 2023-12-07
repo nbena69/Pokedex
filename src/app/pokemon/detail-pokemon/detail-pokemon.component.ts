@@ -4,13 +4,14 @@ import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {Pokemon} from "../pokemon";
 import {PokemonTypeColorPipe} from "../pokemon-type-color.pipe";
 import {PokemonService} from "../pokemon.service";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-detail-pokemon',
   standalone: true,
   imports: [CommonModule, PokemonTypeColorPipe, RouterLink],
   templateUrl: './detail-pokemon.component.html',
-  providers: [PokemonService]
+  providers: [PokemonService, HttpClient]
 
 })
 export class DetailPokemonComponent implements OnInit{

@@ -4,6 +4,7 @@ import {Pokemon} from "../pokemon";
 import {ActivatedRoute} from "@angular/router";
 import {PokemonService} from "../pokemon.service";
 import {PokemonFormComponent} from "../pokemon-form/pokemon-form.component";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
     selector: 'app-edit-pokemon',
@@ -19,7 +20,7 @@ import {PokemonFormComponent} from "../pokemon-form/pokemon-form.component";
         </h2>
     `,
     styles: ``,
-    providers: [PokemonService]
+    providers: [PokemonService, HttpClient]
 })
 export class EditPokemonComponent implements OnInit {
     pokemon: Pokemon | undefined;
