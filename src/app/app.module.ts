@@ -26,5 +26,6 @@ import {InMemoryDataService} from "./in-memory-data.service";
     providers: [HttpHandler],
     bootstrap: [AppComponent]
 })
+
 export class AppModule {
 }
