@@ -1,27 +1,42 @@
-# PokemonApp
+# Pokedex
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
 
-## Development server
+## À Propos du Projet
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Pokédex est une application web Angular offrant une expérience moderne pour rechercher, visualiser et éditer des Pokémon, avec une authentification sécurisée et des fonctionnalités avancées de recherche et de gestion des données. Ce projet a été développé en autodidacte, en parallèle de ma deuxième année d'étude supérieur.
 
-## Code scaffolding
+## Fonctionnalités
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Exploration Pokémon :** Permet d'explorer une vaste liste de Pokémon avec facilité, offrant des fonctionnalités avancées telles que la recherche, la visualisation et l'édition.
+  
+- **Interface Angular :** Utilise Angular CLI pour la gestion du projet et des composants Angular pour une interface utilisateur fluide et moderne.
+
+## Utilisation
+
+1. **Serveur de Développement :**
+   ```bash
+   ng serve
+Ouvrez votre navigateur et accédez à http://localhost:4200/. L'application se rechargera automatiquement à chaque modification des fichiers sources.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Pour construire le projet, exécutez la commande suivante :
+   ```bash
+   ng build
 
-## Running unit tests
+## Contributions
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Si vous souhaitez contribuer à ce projet, suivez ces étapes :
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Fork du projet
+2. Créez une branche pour votre fonctionnalité
+   ```bash
+   git checkout -b feature/NouvelleFonctionnalite
+3. Commit de vos modifications
+   ```bash
+   git commit -am 'Ajout de la nouvelle fonctionnalité'
+4. Push vers la branche
+   ```bash
+   git push origin feature/NouvelleFonctionnalite
+5. Créez une Pull Request
