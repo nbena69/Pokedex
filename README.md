@@ -1,42 +1,42 @@
 # Pokedex
 
-Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
 
-## À Propos du Projet
+## About the Project
 
-Pokédex est une application web Angular offrant une expérience moderne pour rechercher, visualiser et éditer des Pokémon, avec une authentification sécurisée et des fonctionnalités avancées de recherche et de gestion des données. Ce projet a été développé en autodidacte, en parallèle de ma deuxième année d'étude supérieur.
+Pokédex is an Angular web application providing a modern experience for searching, viewing and editing Pokémon, with secure authentication and advanced search and data management features. This project was developed as an autodidact, in parallel with my second year of higher education.
 
-## Fonctionnalités
+## Features
 
-- **Exploration Pokémon :** Permet d'explorer une vaste liste de Pokémon avec facilité, offrant des fonctionnalités avancées telles que la recherche, la visualisation et l'édition.
+- **Pokémon Exploration :** Allows you to easily explore a huge list of Pokémon, providing advanced features such as searching, viewing and editing.
   
-- **Interface Angular :** Utilise Angular CLI pour la gestion du projet et des composants Angular pour une interface utilisateur fluide et moderne.
+- **Angular Interface :** Uses Angular CLI for project management and Angular components for a smooth and modern user interface.
 
-## Utilisation
+## Use
 
-1. **Serveur de Développement :**
+1. **Development Server :**
    ```bash
    ng serve
-Ouvrez votre navigateur et accédez à http://localhost:4200/. L'application se rechargera automatiquement à chaque modification des fichiers sources.
+Open your browser and navigate to http://localhost:4200/. The application automatically reloads each time the source files are modified.
 
 ## Build
 
-1. Pour construire le projet, exécutez la commande suivante :
+1. To build the project, run the following command :
    ```bash
    ng build
 
 ## Contributions
 
-Si vous souhaitez contribuer à ce projet, suivez ces étapes :
+If you would like to contribute to this project, follow these steps :
 
-1. Fork du projet
-2. Créez une branche pour votre fonctionnalité
+1. Project fork
+2. Create a branch for your feature
    ```bash
-   git checkout -b feature/NouvelleFonctionnalite
-3. Commit de vos modifications
+   git checkout -b feature/NewFunctionality
+3. Commit your changes
    ```bash
-   git commit -am 'Ajout de la nouvelle fonctionnalité'
-4. Push vers la branche
+   git commit -am 'Added new functionality'
+4. Push to branch
    ```bash
-   git push origin feature/NouvelleFonctionnalite
-5. Créez une Pull Request
+   git push origin feature/NewFunctionality
+5. Create a Pull Request
